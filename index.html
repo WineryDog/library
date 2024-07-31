@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Library</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- form-modal -->
+    <div id="fullscreen-div"></div>
+    <form action="#" class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-head">
+                <h3 id="modal-title">Add Book</h3>
+                <button type="button" id="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-main">
+                <div class="modal-row">
+                    <div class="modal-col">
+                        <label for="">What is the title of the book?
+                        </label>
+                        <input type="text" placeholder="Pride and Prejudice" class="form-control" name="book_title" required autocomplete="off">
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div class="modal-col">
+                        <label for="">Who is the author of the book?
+                        </label>
+                        <input type="text" placeholder="Jane Austen" class="form-control" name="book_author" required autocomplete="off">
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div class="modal-col">
+                        <label for="">How many pages are in the book?
+                        </label>
+                        <input type="number" placeholder="435" class="form-control" name="book_pages" required autocomplete="off">
+                    </div>
+                </div>
+                <div class = "modal-row">
+                    <div class = "modal-col">
+                        <label for = "">Have you read it yet?</label>
+                        <select name = "labels">
+                            <option value = "read">Yes</option>
+                            <option value = "not-read">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-row" id="modal-btns">
+                    <button type="submit" id="modal-add-btn">Add</button>
+                </div>                
+            </div>
+        </div>
+    </form>
+    <!-- form-modal end-->
+
+    <!-- home -->
+     <div class="library" id="library">
+        <div class="library-content">
+            <div class="library-head">
+                <i class="fa-solid fa-book fa-2x"></i>
+                <h2>My <span>Library</span></h2>
+            </div>
+            <div class="description">
+                <p>Welcome to your personal book tracker! Here, you can enter details about the books you are currently reading and keep track of those you have finished. <em>Happy reading!</em></p>
+            <div class="description foot">
+                <p>Coded by <a href="https://github.com/WineryDog">WineryDog</a>
+                , inspired by <a href="https://github.com/prabinmagar/">prabinmagar</a></p>
+            </div>
+            </div>
+            <div class="library-top">
+                <button type="button" class="btn" id="add-btn">
+                    <span><i class="fas fa-plus"></i>Add Book</span>
+                </button>
+            </div>
+
+            <div class="book-list" id="book-list">
+                <table class="book-table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Pages</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="book-title">A Game of Thrones</span></td>
+                            <td><span class="book-author">George R. R. Martin</span></td>
+                            <td><span class="book-pages">864</span></td>
+                            <td><span class="book-status not-read">Not Read</span></td>
+                            <td><button class="delete-btn">delete</button></td>
+                        </tr>
+                        <tr>
+                            <td><span class="book-title">Notes of a Dirty Old Man</span></td>
+                            <td><span class="book-author">Charles Bukowski</span></td>
+                            <td><span class="book-pages">204</span></td>
+                            <td><span class="book-status read">Read</span></td>
+                            <td><button class="delete-btn">delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+     </div>
+    <!-- home end -->
+    
+</body>
+</html>
